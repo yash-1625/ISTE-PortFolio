@@ -32,8 +32,8 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final Uri insta = Uri.parse('https://www.instagram.com/hsay_rearward/');
-  final Uri twitter=Uri.parse('https://www.linkedin.com/in/yash-agarwal-385557275/');
-  final Uri li=Uri.parse('https://twitter.com/Yash_Ag_arwal');
+  final Uri li=Uri.parse('https://www.linkedin.com/in/yash-agarwal-385557275/');
+  final Uri twitter=Uri.parse('https://twitter.com/Yash_Ag_arwal');
 
   @override
   Widget build(BuildContext context) {
@@ -56,9 +56,9 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      MediaButton(url: li),
-                      MediaButton(url: insta),
-                      MediaButton(url: twitter),
+                      MediaButton(url: li,image: "assets/linkedin.png",),
+                      MediaButton(url: insta, image: "assets/instagram.png"),
+                      MediaButton(url: twitter,image: "assets/twitter.png",),
                     ],
                   ),
                 ),

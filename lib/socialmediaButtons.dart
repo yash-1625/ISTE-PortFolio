@@ -3,16 +3,19 @@ import 'package:url_launcher/url_launcher.dart';
 
 class MediaButton extends StatefulWidget {
   final Uri url;
-  const MediaButton({super.key,required this.url});
+  final String image;
+  const MediaButton({super.key,required this.url,required this.image});
 
   @override
-  State<MediaButton> createState() => _MediaButtonState(url: this.url);
+  State<MediaButton> createState() => _MediaButtonState(url: this.url,image: this.image);
 }
 
 class _MediaButtonState extends State<MediaButton> {
   Uri url=Uri.parse('https://www.instagram.com/hsay_rearward/');
-  _MediaButtonState({required Uri url}){
+  String image="assets/instagram.png";
+  _MediaButtonState({required Uri url,required String image}){
     this.url=url;
+    this.image=image;
   }
 
   Future<void> urlLaunch(url) async {
@@ -32,14 +35,11 @@ class _MediaButtonState extends State<MediaButton> {
             shape: BoxShape.circle,
             color: Color.fromARGB(255, 32, 223, 54), // Customize the color as needed
           ),
-          child: const Center(
-            child: Icon(
-              Icons.call,
-              color: Colors.white, // Customize the icon color
-              size: 20.0, // Customize the icon size
+          child:  Center(
+            child: Image.asset(image),
             ),
           ),
-        ),
-    );
+        );
+    
   }
 }

@@ -30,7 +30,7 @@ class Header2 extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children:[
-                    Image.network('https://tse3.mm.bing.net/th?id=OIP.d14ED9H9QeOn7Uka5EpxVwHaHa&pid=Api&P=0&h=220',
+                    Image.asset('assets/img.jpg',
                     width: 100,
                     height: 120,), 
                   ]
